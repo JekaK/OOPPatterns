@@ -1,4 +1,1 @@
-Projects structure
-new string
-alerted from home
-test
+Creates for education only
