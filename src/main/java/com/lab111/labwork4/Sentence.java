@@ -52,7 +52,7 @@ public class Sentence extends JFrame {
                 count += stepX;
                 continue;
             }
-            Glyph glyph = (SampleGlyph) GlyphFactory.getGlyph(sentence.charAt(i));
+            Glyph glyph = GlyphFactory.getGlyph(sentence.charAt(i));
             MyContext context = new MyContext();
             context.setY(150);
             context.setColor(Color.RED);
