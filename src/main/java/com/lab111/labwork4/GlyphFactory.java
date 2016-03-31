@@ -22,7 +22,7 @@ public class GlyphFactory {
      */
     public static Glyph getGlyph(char glyphCode) {
         char upperGlyph = Character.toUpperCase(glyphCode);
-        SampleGlyph glyph = (SampleGlyph) hashMap.get(glyphCode);
+        Glyph glyph = (SampleGlyph) hashMap.get(glyphCode);
         if (glyph == null) {
             switch (upperGlyph) {
                 case 'A': {
@@ -33,20 +33,17 @@ public class GlyphFactory {
                 }
                 case 'B': {
                     glyph = new SampleGlyph('B');
-                   /* glyph.setY(160);
-                    glyph.setColor(Color.green);*/
+
                     break;
                 }
                 case 'C': {
                     glyph = new SampleGlyph(glyphCode);
-                    /*glyph.setY(140);
-                    glyph.setColor(Color.BLUE);*/
+
                     break;
                 }
                 default: {
                     glyph = new SampleGlyph(glyphCode);
-                    /*glyph.setY((int) (Math.random() * 30 + 150));
-                    glyph.setColor(new Color((int) (Math.random() * 0x1000000)));*/
+
                 }
             }
             hashMap.put(glyphCode, glyph);

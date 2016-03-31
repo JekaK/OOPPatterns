@@ -10,4 +10,16 @@ public interface Glyph {
      * prints info of glyph
      */
     public void print(MyContext context);
+
+    /**
+     *
+     * @return symbol of glyph
+     */
+    public char getSymbol();
+
+    /**
+     *
+     * @param c set symbol of glyph
+     */
+    public void setSymbol(char c);
 }
