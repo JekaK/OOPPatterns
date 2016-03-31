@@ -9,5 +9,5 @@ public interface Glyph {
     /**
      * prints info of glyph
      */
-    public void print();
+    public void print(MyContext context);
 }

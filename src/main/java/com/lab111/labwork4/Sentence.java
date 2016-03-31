@@ -38,37 +38,43 @@ public class Sentence extends JFrame {
     @Override
     public void paint(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
-        Font font = new Font("Italic", Font.CENTER_BASELINE, 10);
-        Font bigfont = font.deriveFont(AffineTransform.getScaleInstance(11.0, 11.0));
+
 
         int stepX = 100;
         for (int i = 0; i < sentence.length(); i++) {
             if (!Character.isAlphabetic(sentence.charAt(i))) {
                 System.out.println("Character: " + sentence.charAt(i));
                 g2.setColor(Color.black);
+                Font font = new Font("Italic", Font.CENTER_BASELINE, 10);
+                Font bigfont = font.deriveFont(AffineTransform.getScaleInstance(11.0, 11.0));
                 GlyphVector gv = bigfont.createGlyphVector(g2.getFontRenderContext(), String.valueOf(sentence.charAt(i)));
                 g2.drawGlyphVector(gv, (float) count, (float) 150);
                 count += stepX;
                 continue;
             }
             SampleGlyph glyph = (SampleGlyph) GlyphFactory.getGlyph(sentence.charAt(i));
-
+            MyContext context = new MyContext();
+            context.setY(150);
+            context.setColor(Color.RED);
             if (count == 0) {
-                glyph.setX(10);
+                context.setX(10);
                 count += stepX;
             } else {
-                glyph.setX(count);
+                context.setX(count);
                 count += stepX;
             }
-            glyph.print();
+            glyph.print(context);
             /*
                Just paint a glyph
                Use standard library for glyphs but paint my own glyphs
              */
             if (glyph != null) {
-                g2.setColor(glyph.getColor());
+                Font  font = new Font("Italic", Font.HANGING_BASELINE, 10);
+                Font bigfont = font.deriveFont(AffineTransform.getScaleInstance(11.0, 11.0));
+
+                g2.setColor(context.getColor());
                 GlyphVector gv = bigfont.createGlyphVector(g2.getFontRenderContext(), String.valueOf(glyph.getSymbol()));
-                g2.drawGlyphVector(gv, (float) glyph.getX(), (float) glyph.getY());
+                g2.drawGlyphVector(gv, (float) context.getX(), (float) context.getY());
             }
         }
         count = 0;

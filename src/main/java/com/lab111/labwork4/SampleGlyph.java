@@ -11,10 +11,7 @@ import java.awt.*;
  * Concrete Flyweight
  */
 public class SampleGlyph extends JComponent implements Glyph {
-    protected char symbol;
-    protected int x;
-    protected int y;
-    Color color;
+    private char symbol;
 
     /**
      * @param symbol some symbol for setting
@@ -29,44 +26,6 @@ public class SampleGlyph extends JComponent implements Glyph {
     public char getSymbol() {
         return symbol;
     }
-
-    /**
-     * @return X coordinate
-     */
-    public int getX() {
-        return x;
-    }
-
-    /**
-     * @return Y coordinate
-     */
-    public int getY() {
-        return y;
-    }
-
-    /**
-     * @return color of glyph
-     */
-    public Color getColor() {
-        return color;
-    }
-
-    /**
-     * @param x set local x
-     */
-    public void setX(int x) {
-        this.x = x;
-
-    }
-
-    /**
-     * @param y set local y
-     */
-    public void setY(int y) {
-        this.y = y;
-    }
-
-
     /**
      * @param symbol set symbol
      */
@@ -75,18 +34,11 @@ public class SampleGlyph extends JComponent implements Glyph {
     }
 
     /**
-     * @param color sets color
-     */
-    public void setColor(Color color) {
-        this.color = color;
-    }
-
-    /**
      * prints info
      */
     @Override
-    public void print() {
-        System.out.println("Glyph: " + symbol + " X: " + getX() + " Y: " + getY());
+    public void print(MyContext context) {
+        System.out.println("Glyph: " + symbol + " X: " + context.getX() + " Y: " + context.getY());
     }
 
 }
