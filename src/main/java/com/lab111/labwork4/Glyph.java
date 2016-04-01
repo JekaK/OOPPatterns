@@ -17,9 +17,4 @@ public interface Glyph {
      */
     public char getSymbol();
 
-    /**
-     *
-     * @param c set symbol of glyph
-     */
-    public void setSymbol(char c);
 }
