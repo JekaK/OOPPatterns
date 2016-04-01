@@ -1,14 +1,11 @@
 package com.lab111.labwork4;
 
-import javax.swing.*;
-import java.awt.*;
-
 /**
  * Created by kruku on 29.03.2016.
  */
 
 /**
- * Concrete Flyweight
+ * Unshared Flyweight
  */
 public class SampleGlyph extends Glyph  {
     private char symbol;
@@ -37,7 +34,7 @@ public class SampleGlyph extends Glyph  {
      * prints info
      */
     @Override
-    public void print(MyContext context) {
+    public void print(AllState context) {
         System.out.println("Glyph: " + symbol + " X: " + context.getX() + " Y: " + context.getY());
     }
 

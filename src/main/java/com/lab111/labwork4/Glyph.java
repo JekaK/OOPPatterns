@@ -9,7 +9,7 @@ public abstract class Glyph {
     /**
      * prints info of glyph
      */
-    public abstract void print(MyContext context);
+    public abstract void print(AllState context);
 
     /**
      *

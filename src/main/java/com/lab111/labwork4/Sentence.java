@@ -53,7 +53,7 @@ public class Sentence extends JFrame {
                 continue;
             }
             Glyph glyph = GlyphFactory.getGlyph(sentence.charAt(i));
-            MyContext context = new MyContext();
+            AllState context = new AllState();
             context.setY(150);
             context.setColor(Color.RED);
             if (count == 0) {

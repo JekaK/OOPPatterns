@@ -5,7 +5,7 @@ import java.awt.*;
 /**
  * Created by kruku on 31.03.2016.
  */
-public class MyContext {
+public class AllState {
     protected int x;
     protected int y;
     Color color;
