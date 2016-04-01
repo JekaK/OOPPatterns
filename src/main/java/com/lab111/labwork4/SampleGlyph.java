@@ -10,7 +10,7 @@ import java.awt.*;
 /**
  * Concrete Flyweight
  */
-public class SampleGlyph extends JComponent implements Glyph {
+public class SampleGlyph extends Glyph  {
     private char symbol;
 
     /**

@@ -5,16 +5,16 @@ package com.lab111.labwork4; /**
 /**
  * Flyweight
  */
-public interface Glyph {
+public abstract class Glyph {
     /**
      * prints info of glyph
      */
-    public void print(MyContext context);
+    public abstract void print(MyContext context);
 
     /**
      *
      * @return symbol of glyph
      */
-    public char getSymbol();
+    public abstract char getSymbol();
 
 }

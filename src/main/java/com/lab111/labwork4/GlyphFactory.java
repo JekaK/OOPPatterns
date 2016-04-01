@@ -27,8 +27,6 @@ public class GlyphFactory {
             switch (upperGlyph) {
                 case 'A': {
                     glyph = new SampleGlyph('A');
-                   /* glyph.setY(120);
-                    glyph.setColor(Color.RED);*/
                     break;
                 }
                 case 'B': {
