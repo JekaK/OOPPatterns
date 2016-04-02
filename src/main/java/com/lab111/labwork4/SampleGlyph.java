@@ -18,17 +18,7 @@ public class SampleGlyph extends Glyph  {
     }
 
     /**
-     * @return symbol
-     */
-    public char getSymbol() {
-        return symbol;
-    }
-    /**
-     * @param symbol set symbol
-     */
-    public void setSymbol(char symbol) {
-        this.symbol = symbol;
-    }
+
 
     /**
      * prints info

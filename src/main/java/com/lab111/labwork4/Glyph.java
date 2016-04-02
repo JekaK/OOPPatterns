@@ -11,10 +11,5 @@ public abstract class Glyph {
      */
     public abstract void print(AllState context);
 
-    /**
-     *
-     * @return symbol of glyph
-     */
-    public abstract char getSymbol();
 
 }

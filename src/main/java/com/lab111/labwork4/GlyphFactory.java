@@ -22,7 +22,7 @@ public class GlyphFactory {
      */
     public static Glyph getGlyph(char glyphCode) {
         char upperGlyph = Character.toUpperCase(glyphCode);
-        Glyph glyph = (SampleGlyph) hashMap.get(glyphCode);
+        Glyph glyph =  hashMap.get(glyphCode);
         if (glyph == null) {
             switch (upperGlyph) {
                 case 'A': {

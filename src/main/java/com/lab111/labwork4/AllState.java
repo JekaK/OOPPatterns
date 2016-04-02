@@ -49,8 +49,6 @@ public class AllState {
     }
 
 
-
-
     /**
      * @param color sets color
      */
