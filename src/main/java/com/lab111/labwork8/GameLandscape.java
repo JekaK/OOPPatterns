@@ -11,24 +11,15 @@ import java.util.GregorianCalendar;
  * Composite
  */
 public class GameLandscape implements Components, Cloneable {
-    private int x, y, area;
-    private String name;
+    private Landscape landscape;
     private ArrayList<Tree> trees;
     private ArrayList<Grass> grasses;
 
     /**
      * Constructor for landscape
-     *
-     * @param x    coordinate X
-     * @param y    coordinate Y
-     * @param name name of landscape
-     * @param area area of landscape
      */
-    public GameLandscape(int x, int y, String name, int area) {
-        this.x = x;
-        this.y = y;
-        this.name = name;
-        this.area = area;
+    public GameLandscape(Landscape landscape) {
+        this.landscape = landscape;
     }
 
     /**
@@ -56,45 +47,19 @@ public class GameLandscape implements Components, Cloneable {
     }
 
     /**
-     * @return coordinate of X
+     *
+     * @return current landscape
      */
-    public int getX() {
-        return x;
+    public Landscape getLandscape() {
+        return landscape;
     }
 
     /**
-     * @return coordinate of Y
+     *
+     * @param landscape new landscape
      */
-    public int getY() {
-        return y;
-    }
-
-    /**
-     * @return name of landscape
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @param x coordinate X
-     */
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    /**
-     * @param y coordinate Y
-     */
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    /**
-     * @param name name of landscape
-     */
-    public void setName(String name) {
-        this.name = name;
+    public void setLandscape(Landscape landscape) {
+        this.landscape = landscape;
     }
 
     /**
@@ -102,7 +67,8 @@ public class GameLandscape implements Components, Cloneable {
      */
     @Override
     public void draw() {
-        System.out.println("Landscape: " + getName() + " X: " + getX() + " Y: " + getY());
+        System.out.println("===Landscape===");
+        landscape.draw();
         System.out.println("===TREES===");
         for (Tree i : trees) {
             i.draw();
@@ -121,6 +87,7 @@ public class GameLandscape implements Components, Cloneable {
         GameLandscape clone = (GameLandscape) super.clone();
         clone.trees = (ArrayList<Tree>) trees.clone();
         clone.grasses = (ArrayList<Grass>) grasses.clone();
+        clone.landscape = landscape.clone();
         return clone;
     }
 }
