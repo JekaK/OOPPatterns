@@ -3,6 +3,10 @@ package com.lab111.labwork8;
 /**
  * Created by kruku on 08.04.2016.
  */
+
+/**
+ * Leaf
+ */
 public class Landscape implements Components,Cloneable {
     private int area;
     private String name;

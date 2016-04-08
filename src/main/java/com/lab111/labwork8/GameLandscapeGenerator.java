@@ -1,7 +1,6 @@
 package com.lab111.labwork8;
 
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 
 /**
  * Created by kruku on 08.04.2016.
@@ -10,7 +9,7 @@ import java.util.GregorianCalendar;
 /**
  * Composite
  */
-public class GameLandscape implements Components, Cloneable {
+public class GameLandscapeGenerator implements Components, Cloneable {
     private Landscape landscape;
     private ArrayList<Tree> trees;
     private ArrayList<Grass> grasses;
@@ -18,7 +17,7 @@ public class GameLandscape implements Components, Cloneable {
     /**
      * Constructor for landscape
      */
-    public GameLandscape(Landscape landscape) {
+    public GameLandscapeGenerator(Landscape landscape) {
         this.landscape = landscape;
     }
 
@@ -79,12 +78,12 @@ public class GameLandscape implements Components, Cloneable {
         }
     }
 
-    public GameLandscape surfaceCloning() throws CloneNotSupportedException {
-        return (GameLandscape) super.clone();
+    public GameLandscapeGenerator surfaceCloning() throws CloneNotSupportedException {
+        return (GameLandscapeGenerator) super.clone();
     }
 
-    public GameLandscape deepCloning() throws CloneNotSupportedException {
-        GameLandscape clone = (GameLandscape) super.clone();
+    public GameLandscapeGenerator deepCloning() throws CloneNotSupportedException {
+        GameLandscapeGenerator clone = (GameLandscapeGenerator) super.clone();
         clone.trees = (ArrayList<Tree>) trees.clone();
         clone.grasses = (ArrayList<Grass>) grasses.clone();
         clone.landscape = landscape.clone();
