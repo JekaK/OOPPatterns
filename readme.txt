@@ -1,4 +1,1 @@
-Projects structure
-new string
-alerted from home
-test
+Labs from OOP Patterns course
