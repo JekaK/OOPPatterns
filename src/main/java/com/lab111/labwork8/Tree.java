@@ -85,6 +85,9 @@ public class Tree implements Components, Cloneable {
      */
     @Override
     public void draw() {
-        System.out.println("X: " + getX() + " Y: " + getY() + " Height: " + getHeight() + " Age: " + getAge());
+        System.out.println("Tree:" + "X: " + getX() + " Y: " + getY() + " Height: " + getHeight() + " Age: " + getAge());
+    }
+    public Tree clone() throws CloneNotSupportedException {
+        return (Tree) super.clone();
     }
 }

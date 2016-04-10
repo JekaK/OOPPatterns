@@ -1,10 +1,7 @@
 package com.lab111;
 
 
-import com.lab111.labwork8.GameLandscapeGenerator;
-import com.lab111.labwork8.Grass;
-import com.lab111.labwork8.Landscape;
-import com.lab111.labwork8.Tree;
+import com.lab111.labwork8.*;
 
 /**
  * Template first class.
@@ -26,18 +23,29 @@ public final class TestMain {
      * @param args Parameters from command line
      */
     public static void main(final String[] args) throws CloneNotSupportedException {
-        GameLandscapeGenerator gameLandscapeGenerator = new GameLandscapeGenerator(new Landscape(1000,"MyLandscape"));
-        gameLandscapeGenerator.addTree(new Tree(30,400,30,40));
-        gameLandscapeGenerator.addTree(new Tree(50,50,60,150));
-        gameLandscapeGenerator.addGrass(new Grass(300,150,50,50));
-        System.out.println("ORIGINAL");
-        gameLandscapeGenerator.draw();
-        GameLandscapeGenerator surfaceclone = gameLandscapeGenerator.surfaceCloning();
-        surfaceclone.addTree(new Tree(4,3,50,60));
-        surfaceclone.getLandscape().setArea(50);
-        System.out.println("SURFACE CLONE");
-        surfaceclone.draw();
-        System.out.println("ORIGINAL");
-        gameLandscapeGenerator.draw();
+
+        GameElementsContainer gameElementsContainer = new GameElementsContainer(new Landscape(1000));
+
+        CompositeLandscape compositeLandscape = new CompositeLandscape("MyLand", gameElementsContainer);
+
+        ComponentsMutant mutant = new ComponentsMutant();
+        mutant.add(new Grass(4, 50, 4, 5));
+        ComponentsMutant mutant1 = new ComponentsMutant();
+        mutant1.add(mutant);
+        mutant1.add(new Tree(3, 56, 2, 1));
+        mutant1.add(new Grass(5, 3, 13, 5));
+        ComponentsMutant mutant2 = new ComponentsMutant();
+        mutant2.add(mutant1);
+        ComponentsMutant mutant3 = new ComponentsMutant();
+        mutant3.add(mutant2);
+        mutant3.add(new Tree(1, 56, 34, 5));
+
+        gameElementsContainer.addComponents(mutant3);
+        System.out.println("===Original===");
+        compositeLandscape.draw();
+        System.out.println("===CLONE===");
+        CompositeLandscape clone = new CompositeLandscape("MyLand2", gameElementsContainer.surfaceCloning());
+        clone.draw();
+
     }
 }

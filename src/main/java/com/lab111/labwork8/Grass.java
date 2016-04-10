@@ -89,6 +89,9 @@ public class Grass implements Components, Cloneable {
      */
     @Override
     public void draw() {
-        System.out.println("X: " + getX() + " Y: " + getY() + " Area: " + getArea() + " Density: " + getDensity());
+        System.out.println("Grass:" + "X: " + getX() + " Y: " + getY() + " Area: " + getArea() + " Density: " + getDensity());
+    }
+    public Grass clone() throws CloneNotSupportedException {
+        return (Grass) super.clone();
     }
 }
