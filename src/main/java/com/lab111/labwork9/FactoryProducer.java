@@ -9,6 +9,17 @@ import com.lab111.labwork9.Factories.WinAPIWidgetFactory;
  * Created by kruku on 13.04.2016.
  */
 public class FactoryProducer {
+    /**
+     * Constructor
+     */
+    public FactoryProducer() {
+    }
+
+    /**
+     * For simplify life
+     * @param s name of widget technology
+     * @return factory for same widget
+     */
     public static AbstractFactory getFactory(String s){
         if(s == "WinApi"){
             return new WinAPIWidgetFactory();
