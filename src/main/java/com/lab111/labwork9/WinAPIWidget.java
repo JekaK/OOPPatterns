@@ -1,6 +1,4 @@
-package com.lab111.labwork9.Products;
-
-import com.lab111.labwork9.ProductInterface.GraphicalWidget;
+package com.lab111.labwork9;
 
 import javax.swing.*;
 

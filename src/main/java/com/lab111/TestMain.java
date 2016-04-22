@@ -4,7 +4,7 @@ package com.lab111;
 import com.lab111.labwork9.AbstractFactory;
 import com.lab111.labwork9.FactoryProducer;
 
-import com.lab111.labwork9.ProductInterface.GraphicalWidget;
+import com.lab111.labwork9.GraphicalWidget;
 
 /**
  * Template first class.
