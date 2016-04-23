@@ -140,7 +140,7 @@ public class CustomList implements Iterable<Integer> {
         return false;
     }
 
-    public void addIndexies() {
+    public void addIndexes() {
         int maxValue = Integer.MAX_VALUE;
         int minIndex = -1;
         int i = 0;
@@ -213,7 +213,7 @@ public class CustomList implements Iterable<Integer> {
             @Override
             public Integer next() {
                 if (this.hasNext()) {
-                    addIndexies();
+                    addIndexes();
                     int i = indexies[index++];
                     return listStruct[i];
                 }

@@ -16,8 +16,7 @@ public class Main {
         customList.add(4);
         customList.add(3);
         customList.add(0);
-
-        Iterator iterator = customList.iterator();
+        Iterator iterator = customList.sortedIterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
