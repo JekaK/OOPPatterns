@@ -45,6 +45,7 @@ public class LineChartDiagram extends Application implements Strategy {
         final NumberAxis yAxis = new NumberAxis();
         xAxis.setLabel("Number of Month");
 
+
         final LineChart<String, Number> lineChart =
                 new LineChart<String, Number>(xAxis, yAxis);
 
