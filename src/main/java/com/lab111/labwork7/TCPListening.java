@@ -6,8 +6,8 @@ package com.lab111.labwork7;
 public class TCPListening extends TCPState {
     @Override
     public void openConnection(int port) {
-        super.setPort(port);
-        System.out.println("Opening connection in port " + super.getPort());
+
+        System.out.println("Opening connection in port " + port);
     }
 
     @Override

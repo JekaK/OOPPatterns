@@ -7,7 +7,7 @@ public class TCPClose extends TCPState {
 
     @Override
     public void openConnection(int port) {
-        System.out.println("Connection is opened in port "+super.getPort());
+        System.out.println("Connection is opened in port " + port);
     }
 
     @Override

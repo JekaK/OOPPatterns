@@ -6,19 +6,15 @@ package com.lab111.labwork7;
 public class Main {
     public static void main(String[] args) {
         TCPConnection connection = new TCPConnection();
-        System.out.println("===TCPLISTENING STATE===");
-        connection.openConnection(456);
-        connection.sendMessage("Some Text");
+        connection.openConnection(43);
+        connection.sendMessage("sdf");
+        connection.openConnection(43);
+        connection.openConnection(433);
+        connection.sendMessage("sdfsdf");
+        connection.sendMessage("sdf");
         connection.closeConnection();
-        System.out.println("====TCPESTABLISHED STATE===");
-        connection.setEstablishedStateAsMain();
-        connection.openConnection(456);
-        connection.sendMessage("Some Text");
         connection.closeConnection();
-        System.out.println("==TCPCONNECTION STATE===");
-        connection.setClosingStateAsMain();
-        connection.openConnection(456);
-        connection.sendMessage("Some Text");
+        connection.sendMessage("sdfsdf");
         connection.closeConnection();
     }
 }

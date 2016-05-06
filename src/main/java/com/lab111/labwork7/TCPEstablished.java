@@ -7,7 +7,7 @@ public class TCPEstablished extends TCPState {
 
     @Override
     public void openConnection(int port) {
-        System.out.println("Connection is open in port " + super.getPort());
+        System.out.println("Connection is open in port " + port);
     }
 
     @Override
