@@ -7,7 +7,7 @@ public class TCPListening extends TCPState {
     @Override
     public void openConnection(int port) {
 
-        System.out.println("Opening connection in port " + port);
+        System.out.println("Open connection in port " + port);
     }
 
     @Override

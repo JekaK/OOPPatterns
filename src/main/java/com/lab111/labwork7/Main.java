@@ -5,16 +5,16 @@ package com.lab111.labwork7;
  */
 public class Main {
     public static void main(String[] args) {
+
         TCPConnection connection = new TCPConnection();
-        connection.openConnection(43);
+
+        connection.closeConnection();
         connection.sendMessage("sdf");
-        connection.openConnection(43);
-        connection.openConnection(433);
-        connection.sendMessage("sdfsdf");
+        connection.openConnection(45);
+        connection.openConnection(45);
+        connection.sendMessage("sdfsd");
         connection.sendMessage("sdf");
         connection.closeConnection();
-        connection.closeConnection();
-        connection.sendMessage("sdfsdf");
         connection.closeConnection();
     }
 }

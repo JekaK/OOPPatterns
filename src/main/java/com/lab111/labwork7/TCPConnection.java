@@ -37,6 +37,7 @@ public class TCPConnection {
             if (state instanceof TCPListening || state instanceof TCPEstablished) {
                 state = new TCPClose();
                 state.closeConnection();
+                state.setPort(null);
                 state = null;
             } else {
                 System.out.println("Connection is not opened");
