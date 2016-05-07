@@ -9,12 +9,13 @@ public class Main {
         TCPConnection connection = new TCPConnection();
 
         connection.closeConnection();
-        connection.sendMessage("sdf");
-        connection.openConnection(45);
-        connection.openConnection(45);
-        connection.sendMessage("sdfsd");
-        connection.sendMessage("sdf");
         connection.closeConnection();
+        connection.openConnection(34);
+        connection.openConnection(34);
+        connection.sendMessage("sdfs");
+        connection.sendMessage("sdf");
+        connection.openConnection(34);
         connection.closeConnection();
+        connection.openConnection(34);
     }
 }

@@ -5,15 +5,7 @@ package com.lab111.labwork7;
  */
 public abstract class TCPState {
     private static Integer port;
-    public abstract void openConnection(int port);
-    public abstract void closeConnection();
-    public abstract void sendMessage(String message);
-
-    public Integer getPort() {
-        return port;
-    }
-
-    public void setPort(Integer port) {
-        this.port = port;
-    }
+    public abstract void openConnection(TCPConnection connection,int port);
+    public abstract void closeConnection(TCPConnection connection);
+    public abstract void sendMessage(TCPConnection connection,String message);
 }
